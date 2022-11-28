@@ -1,0 +1,11 @@
+img=imread("cameraman.tif");
+img_new = img+20;
+im_re=imresize(img,[200,200]);
+imwrite(im_re,"cameraman_re.tif");
+imwrite(img_new,"cameraman_gs.tif");
+subplot(2,2,1);
+imshow(img);
+subplot(2,2,2);
+imshow(img_new);
+subplot(2,2,3);
+imshow(im_re);
