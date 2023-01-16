@@ -1,0 +1,149 @@
+%Translation
+
+img=imread("cameraman.tif");
+translated_img=imtranslate(img,[20,30]);
+subplot(1,2,1);
+imshow(img);
+title("Original Image");
+subplot(1,2,2);
+imshow(translated_img);
+title("Translated Image");
+
+%Scaling
+
+img=imread("cameraman.tif");
+%Scaling the image by factor of 2
+img_res=imresize(img,0.5);
+subplot(1,2,1);
+imshow(img);
+title("Original Image");
+subplot(1,2,2);
+imshow(img_res);
+title("Scaled Image");
+figure
+imshow(img);
+figure
+imshow(img_res);
+%Rotation
+
+img=imread("cameraman.tif");
+val=input("Enter the rotation degree- ");
+img_rot=imrotate(img,val);
+subplot(1,2,1);
+imshow(img);
+title("Original Image");
+subplot(1,2,2);
+imshow(img_rot);
+title("Image rotated by "+val+" degrees");
+%Shrinking
+
+img=imread("cameraman.tif");
+f= input('Enter the scaling value for shrinking(value should be between [0 1]):');
+img_shr=imresize(img,f);
+subplot(1,2,1);
+imshow(img);
+title('Original Image');
+subplot(1,2,2);
+imshow(img_shr);
+title('Shrinked Image');
+%Zooming
+
+img = imread("trees.tif");
+[m,n] = size(img);
+f=input("Enter the zooming factor- ");
+for i = 1:m
+	for j = 1:n
+		for k = 1:f
+			img_zoomed((i-1)*f+k,(j-1)*f+k) = img(i,j);
+		end
+	end
+end
+subplot(1,2,1);
+imshow(img);
+title("Original Image");
+subplot(1,2,2);
+imshow(img_zoomed);
+title("Zoomed Image");
+
+::::::::::::::
+ass1.m
+::::::::::::::
+%Translation
+
+img=imread("cameraman.tif");
+translated_img=imtranslate(img,[20,30]);
+subplot(1,2,1);
+imshow(img);
+title("Original Image");
+subplot(1,2,2);
+imshow(translated_img);
+title("Translated Image");
+
+::::::::::::::
+ass2.m
+::::::::::::::
+%Scaling
+
+img=imread("cameraman.tif");
+%Scaling the image by factor of 2
+img_res=imresize(img,0.5);
+subplot(1,2,1);
+imshow(img);
+title("Original Image");
+subplot(1,2,2);
+imshow(img_res);
+title("Scaled Image");
+figure
+imshow(img);
+figure
+imshow(img_res);
+::::::::::::::
+ass3.m
+::::::::::::::
+%Rotation
+
+img=imread("cameraman.tif");
+val=input("Enter the rotation degree- ");
+img_rot=imrotate(img,val);
+subplot(1,2,1);
+imshow(img);
+title("Original Image");
+subplot(1,2,2);
+imshow(img_rot);
+title("Image rotated by "+val+" degrees");
+::::::::::::::
+ass4.m
+::::::::::::::
+%Shrinking
+
+img=imread("cameraman.tif");
+f= input('Enter the scaling value for shrinking(value should be between [0 1]):');
+img_shr=imresize(img,f);
+subplot(1,2,1);
+imshow(img);
+title('Original Image');
+subplot(1,2,2);
+imshow(img_shr);
+title('Shrinked Image');
+::::::::::::::
+ass5.m
+::::::::::::::
+%Zooming
+
+img = imread("trees.tif");
+[m,n] = size(img);
+f=input("Enter the zooming factor- ");
+for i = 1:m
+	for j = 1:n
+		for k = 1:f
+			img_zoomed((i-1)*f+k,(j-1)*f+k) = img(i,j);
+		end
+	end
+end
+subplot(1,2,1);
+imshow(img);
+title("Original Image");
+subplot(1,2,2);
+imshow(img_zoomed);
+title("Zoomed Image");
+
