@@ -1,0 +1,9 @@
+img = imread("lenna.bmp");
+img_gr=im2gray(img);
+img_bw=imbinarize(img_gr);
+subplot(2,2,1);
+imgshow(img);
+subplot(2,2,2);
+imgshow(img_gr);
+subplot(2,2,3);
+imshow(img_bw);
